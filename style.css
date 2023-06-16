@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "poppins";
+  background-position: center;
+}
+
+.header {
+  background-image: url(./Me.JPG);
+  background-size: cover;
+  height: 100vh;
+}
+
+.overlay {
+  background-color: rgba(33, 43, 63, 0.5);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.middle-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.logo img {
+  width: 5rem;
+  height: auto;
+  border-radius: 50%;
+  margin: 3rem 0;
+}
+
+.middle-component .teks h1 {
+  font-size: 2.5rem;
+}
+
+.middle-component .teks p {
+  
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.link-icon{
+  width: 300px;
+  margin: 10px 0;
+}
+
+.link-icon ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a{
+  text-decoration: none;
+}
