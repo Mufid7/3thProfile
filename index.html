@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-    <title>Document</title>
+    <title>Profile Me</title>
   </head>
   <body>
     <section class="header">
@@ -20,7 +20,7 @@
           </div>
           <div class="teks">
             <h1>Muhammad Mufid Ridho</h1>
-            <p>A Web Developer, IoT Engineer and Designer</p>
+            <p><span class="typing"></span> </p>
           </div>
           <div class="link-icon">
             <ul>
@@ -32,8 +32,37 @@
             </ul> 
           </div>
         </div>
-        <nav></nav>
+        <nav>
+          <div class="logo-me"></div>
+          <div class="menu-me">
+            <ul>
+              <li><a href="">hello</a></li>
+              <li><a href="">hello</a></li>
+              <li><a href="">hello</a></li>
+              <li><a href="">hello</a></li>
+              <li><a href="">hello</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </section>
+<!-- buat teks ketik otomatis -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js
+"></script>
+
+<script>
+  var typed = new Typed(".typing", {
+        strings: [
+          "Assalamualaikum, I'm Mufid",
+          "a Web Developer and IoT engineer",
+          "also interested in design",
+          "and A muslim person"
+        ],
+        typeSpeed: 35,
+        backSpeed: 30,
+        loop: true,
+      });
+</script>
+
   </body>
 </html>
