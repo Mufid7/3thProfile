@@ -1,11 +1,16 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+body {
   color: white;
   font-family: "poppins";
-  background-position: center;
 }
+
 
 .header {
   background-image: url(./Me.JPG);
@@ -46,7 +51,7 @@
 }
 
 .link-icon {
-  width: 300px;
+  width: 150px;
   margin: 10px 0;
 }
 
@@ -57,7 +62,6 @@
 
 .link-icon ul li {
   list-style-type: none;
-  width: 200px;
 }
 
 ul li a {
@@ -86,21 +90,39 @@ nav {
   justify-content: center;
 }
 
-.container-nav{
-  width: 500px;
+.container-nav {
+  width: 60vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.logo-me {
+  width: 30%s;
+}
+
+.menu-me {
+  width: 70%;
 }
 
 .menu-me ul {
   display: flex;
   list-style: none;
+  justify-content: space-around;
 }
 
 li a {
   color: black;
-  margin: 0 20px;
+  padding: 10px 7.5px;
+  font-weight: bold;
+}
+
+li a:hover{
+  background-color:tomato;
+  border-radius: 3px;
+  color: white;
+  transform: scale(1.2);
+  transition: 0.3s;
 }
 
 .logo-me {
@@ -112,4 +134,119 @@ li a {
   width: 3rem;
   height: auto;
   border-radius: 50%;
+}
+
+.menu-toggle{
+   display: none;
+   flex-direction: column;
+   height: 24px;
+   justify-content: space-around;
+   position: relative; 
+}
+
+.menu-toggle span{
+  display: block;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: black;
+  transition: 0.5s;
+}
+
+.menu-toggle input{
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  left: -10px;
+}
+
+/* Hamburger menu Animation */
+.menu-toggle span:nth-child(2){
+  transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~span:nth-child(2){
+transform: rotate(45deg) translate(0, -1px);
+}
+
+.menu-toggle span:nth-child(4){
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~span:nth-child(4){
+transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~span:nth-child(3){
+  transform: scale(0);
+  }
+/* ukuran tablet */
+@media screen and (max-width : 768px) {
+  nav .container-nav .menu-me{
+    width: 90%;  
+  }
+
+  .container-nav .logo-me{
+    display: none;
+  }
+}
+
+/* ukuran hp */
+@media screen and (max-width: 576px){
+
+  .container-nav{
+    width: 90vw;
+    justify-content: end;
+  }
+
+  nav .container-nav .menu-me ul{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    flex-direction: column;
+    background-color: white;
+    height: 100vh;
+    align-items: center;
+    justify-content: start;
+    transform: translateX(100%);
+    transition: .7s;
+  }
+
+  .container-nav .menu-me ul.slide{
+    transform: translateX(0);
+  }
+
+  .menu-me ul li{
+    margin: 3px 0;
+    width: 100%;
+  }
+
+  .menu-me ul li:hover{
+    background-color: tomato;
+  }
+
+  .menu-toggle{
+    display: flex;
+  }
+
+  .container-nav .logo-me{
+    display: block;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-nav .logo-me{
+    display: none;
+  }
+
+  .typing {
+    font-size: 1rem;
+  }
+
+  .middle-component .text-img h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
