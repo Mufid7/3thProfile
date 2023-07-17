@@ -18,6 +18,10 @@ body{
   left: 50%;
   transform: translate(-50%,-50%);
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
 }
 
 .user-box img{
@@ -25,16 +29,77 @@ body{
   width: 250px;
 }
 
-.user-box h1{
+.user-box .text h1{
   font-weight:bold; 
+  text-align: center;
 }
 
-.scroll-button{
-  bottom: 30px;
+.user-box .text p{
+  text-align: center;
+}
+
+.navbar{
   position: absolute;
-  left: 50%;
-  transform: translateX(50%);
-  border: 1px solid gray;
-  padding: 10px 10px 20px ;
-  border-radius: 30px;
+}
+
+li{
+  list-style-type: none ;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+a:hover{
+  color: orange;
+}
+
+.navbar{
+  position: relative;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  top: 30px;
+}
+
+.links{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.toggle-btn{
+  display: none;
+}
+
+/* DROPDOWN MENU */
+/* .dropdown{
+  position: absolute;
+  right: 5%;
+  top: 60px;
+  width: 300px;
+  background: rgb(red, green, blue);
+
+} */
+
+/* RESPONSIVE DISPLAY */
+@media(max-width:992px){
+  .navbar{
+    justify-content: space-between;
+    padding: 0 5% ;
+  }
+
+  .links, .contact{
+    display: none;
+  }
+
+  .toggle-btn{
+    display: block;
+  }
 }
