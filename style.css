@@ -33,7 +33,7 @@ a {
   top: 30px;
 }
 
-.logo img{
+.logo img {
   width: 30px;
   height: auto;
   border-radius: 50%;
@@ -51,7 +51,6 @@ a {
   display: none;
 }
 
-
 /*====== DROPDOWN ======*/
 .dropdown {
   display: none;
@@ -65,7 +64,7 @@ a {
   border-radius: 10px;
   overflow: hidden;
   z-index: 3;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 .dropdown.open {
@@ -79,14 +78,14 @@ a {
   justify-content: center;
 }
 
-.contact{
+.contact {
   background-color: orange;
   padding: 5px;
   border-radius: 10px;
   color: white;
 }
 
-.contact:hover{
+.contact:hover {
   padding: 5px;
   border-radius: 10px;
   color: orange;
@@ -133,21 +132,20 @@ a {
 
 /*====== SECTION 2 ======*/
 
-#section_2{
+#section_2 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
   width: 100%;
-
 }
 
 .container_section_2 {
   width: 100%;
   height: auto;
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -165,14 +163,11 @@ a {
   margin: 5px;
 }
 
-.card_section_2 img{
+.card_section_2 img {
   width: 70px;
   /* object-fit: cover; */
 }
 
-
-/* Style div
-/* Style div elements that have class equal to tag */
 .tag {
   padding: 4px 8px;
   border: 1px solid #e5eaed;
@@ -181,24 +176,21 @@ a {
   font-size: 12px;
   font-weight: 600;
   color: #788697;
-  margin: .5px;
+  margin: 0.5px;
 }
 
-/* Style div elements that have class equal to name */
 .name {
   font-size: 24px;
   font-weight: 600;
   margin-top: 16px;
 }
 
-/* Style p element */
 p {
   font-size: 14px;
   color: #7f8c9b;
   line-height: 150%;
 }
 
-/* Style button element */
 button {
   border: none;
   padding: 12px 24px;
@@ -208,21 +200,85 @@ button {
   color: #0077ff;
   background-color: #e0efff;
 
-  /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
   margin: 0 auto;
   display: block;
 
-  /* Button is a clickable element, therefore it should have a pointer cursor */
   cursor: pointer;
   width: 100%;
   margin: 2px;
 }
 
 .card__details {
-  /* Add space around the details */
   padding: 16px 8px 8px 8px;
 }
 
+/* SECTION 3 */
+
+.section_3 {
+  display: flex;
+  min-height: 70vh;
+  justify-content: center;
+  align-items: center;
+  padding: 0 35px;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343f4f;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover {
+  background: #f2f2f2;
+}
+.wrapper i:first-child {
+  left: -22px;
+  display: none;
+}
+.wrapper i:last-child {
+  right: -22px;
+}
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging img {
+  pointer-events: none;
+}
+.carousel img {
+  height: 340px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+.carousel img:first-child {
+  margin-left: 0px;
+}
 
 /*====== RESPONSIVE ======*/
 @media (max-width: 992px) {
@@ -244,13 +300,21 @@ button {
     display: block;
   }
 
-  #section_2{
+  #section_2 {
     display: block;
-    text-align:center;
-    height: 100vh;
+    text-align: center;
+    height: fit-content;
   }
-
   .container_section_2 {
     flex-direction: column;
+    overflow-y: hidden;
+  }
+
+  .section_3{
+    display: block;
+  }
+  .carousel img {
+    width: calc(100%);
+    width: fit-content;
   }
 }
