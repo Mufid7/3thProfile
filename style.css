@@ -181,6 +181,7 @@ a {
   font-size: 12px;
   font-weight: 600;
   color: #788697;
+  margin: .5px;
 }
 
 /* Style div elements that have class equal to name */
