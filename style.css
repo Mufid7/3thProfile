@@ -315,6 +315,6 @@ button {
   }
   .carousel img {
     width: calc(100%);
-    width: fit-content;
+    height: fit-content;
   }
 }
